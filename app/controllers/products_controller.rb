@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
-    @total = Product.count
+    @total = Product.distinct.count
     total_cost = 0
     @products.each{ |prod| total_cost += prod.price }
     @average = total_cost / Product.count
