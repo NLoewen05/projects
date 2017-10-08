@@ -27,7 +27,9 @@
     <% end %>
   </tbody>
 </table>
-
+<p>Total number of products <%= @total %></p>
+<p>The average price of the products is <%= @average %></p>
+<p>The quantity of stock of all items <%= @quantity %></p>
 <br>
 
 <%= link_to 'New Product', new_product_path %>
